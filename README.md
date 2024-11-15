@@ -1,4 +1,4 @@
-# Weather Forecasting Application ![Click here to view the app](https://weather-app-1058693665617.europe-west1.run.app/)
+# Weather Forecasting Application [Click here](https://weather-app-1058693665617.europe-west1.run.app/)
 ### Author: Virendrasinh Chavda
 
 <p align="justify">
