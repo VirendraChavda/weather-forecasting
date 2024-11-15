@@ -5,6 +5,8 @@
 This repository contains the code for a weather forecasting application that predicts various meteorological parameters using advanced machine learning models. Built on a robust tech stack involving **Dash**, **FastAPI**, **Google Cloud BigQuery**, and **Open-Meteo APIs**, the application provides precise and real-time weather forecasts for different cities. This repository includes all necessary backend logic, data ingestion pipelines, and trained models for seamless operation.
 </p>
 
+![HomePage](weather.png)
+
 ## Table of Contents
 1. [Overview](#overview)
 2. [Features](#features)
