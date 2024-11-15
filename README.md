@@ -69,13 +69,13 @@ Separate models for each parameter: temperature, precipitation, snowfall, wind s
 
 The models were evaluated on historical weather datasets with various performance metrics. Below are the summarized results for each parameter prediction:
 
-| **Parameter**     | **Model Used**      | **Metric** | **Value** |
-|--------------------|---------------------|------------|-----------|
-| **Temperature**   | Gradient Boosting   | MAE        | 1.5°C     |
-| **Precipitation** | Random Forest       | MAE        | 0.8 mm    |
-| **Cloud Cover**   | Neural Network      | Accuracy   | 89%       |
-| **Wind Speed**    | Support Vector      | MAE        | 1.2 km/h  |
-| **Snowfall**      | Decision Tree       | MAE        | 0.5 cm    |
+| **Parameter**     | **Model Used**      | **MAD Error** |
+|--------------------|---------------------|------------|
+| **Temperature**   | Gradient Boosting   | 0.08        |
+| **Precipitation** | Random Forest       | 0.2       |
+| **Cloud Cover**   | CATBOOST     | 1.1       |
+| **Wind Speed**    | LGBM         | 0.012  |
+| **Snowfall**      | LGBM           | 0.001    |
 
 - **MAE (Mean Absolute Error)**: Lower values indicate higher accuracy.
 - **Accuracy**: Represents classification performance for cloud cover conditions.
