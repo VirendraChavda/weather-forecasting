@@ -1,0 +1,231 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    font-family: 'Arial', sans-serif;
+    background-size: cover; /* Ensures the image covers the screen */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center center; /* Centers the image */
+    overflow: hidden; /* Removes scrollbars */
+}
+
+/* Dynamic Background Classes */
+.day-background{
+    background-image: url('/assets/day.gif'); /* Path to background (night.jpg) */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+}
+
+.night-background {
+    background-image: url('/assets/night.gif'); /* Path to background (night.jpg) */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    background-position: center; /* Center the image */
+}
+
+/* Day-specific text styling */
+.day-text {
+    color: #ec7708; /* Dark color for readability during day */
+}
+
+/* Night-specific text styling */
+.night-text {
+    color: #fff; /* White color for better readability at night */
+}
+
+
+/* App Container */
+.app-container {
+    width: 100vw; /* Use full width of viewport */
+    height: 100vh; /* Use full height of viewport */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove padding to make full use of space */
+    text-align: center;
+    color: #fff; /* Default text color */
+    box-sizing: border-box;
+}
+
+/* Adjust header position to ensure no overlapping */
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between elements in the header */
+    padding: 0 20px;
+    position: fixed; /* Fixed at the top of the page */
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4); /* Slight transparency to make it visible */
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.current-time {
+    flex: 1;
+    text-align: center; /* Align current time to the center */
+    font-size: 1.2rem;
+}
+
+.dropdown {
+    flex: 1;
+    text-align: left; /* Align dropdown to the right */
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    color: #000;
+}
+
+/* Make dropdown elements transparent */
+.dropdown .Select__control {
+    background: rgba(0, 0, 0, 0.2) !important; /* Make inner part of dropdown transparent */
+    border: none !important; /* Remove default inner border */
+    box-shadow: none !important; /* Remove default box shadow */
+    color: #000; /* Set text color to black */
+}
+
+.dropdown .Select__value-container {
+    background: transparent !important; /* Make the value container transparent */
+}
+
+.dropdown .Select__single-value {
+    color: #000 !important; /* Set selected value text color to black */
+}
+
+.dropdown .Select__menu {
+    background: rgba(0, 0, 0, 0.5) !important; /* Make dropdown options menu semi-transparent */
+    color: #000 !important; /* Set text color to black for visibility */
+}
+
+.dropdown .Select__indicator-separator {
+    display: none !important; /* Remove the vertical line separator */
+}
+
+.dropdown .Select__dropdown-indicator {
+    color: rgba(0, 0, 0, 0.8) !important; /* Set dropdown arrow color to black */
+}
+
+/* Hover Effects */
+.dropdown:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker background on hover for a better visual effect */
+    border-color: rgba(255, 255, 255, 0.6); /* More pronounced border on hover */
+}
+
+
+
+/* Weather Section */
+/* Current Weather Card - Move Down */
+.current-weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    border-radius: 15px;
+    padding: 2px;
+    width: 300px;
+    text-align: center;
+    margin: 80px 0 2px 0; /* Add top margin to move the card down */
+}
+
+.current-weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.current-weather-details {
+    font-size: 1.1rem;
+    line-height: 0.7;
+}
+
+/* Forecast Section */
+.forecast-section {
+    margin-top: 5px; /* Reduce top margin to bring it closer to the current weather card */
+    text-align: center;
+    margin-bottom: 60px; /* Increased bottom margin to prevent overlap with footer */
+}
+
+.forecast-title {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.forecast-card {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+}
+
+.forecast-icon {
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
+}
+
+
+.forecast-hour,
+.forecast-conditions {
+    margin: 5px auto;
+}
+
+.forecast-temp,
+.forecast-wind,
+.forecast-precipitation {
+    display: flex; /* Allows alignment of children (icon and text) */
+    align-items: center; /* Vertically aligns icon and text */
+    gap: 10px; /* Space between icon and text */
+    justify-content: center; /* Centers the entire row (icon + text) within the card */
+    position: relative; /* To use absolute positioning for icon */
+}
+
+.thermometer-icon,
+.wind-icon,
+.precipitation-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute; /* Moves icon out of the regular flow */
+    left: 5px; /* Align icon to the left edge of the container */
+    margin-left: 10px; /* Optional: Adds some spacing between the icon and left edge */
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    height: 40px; /* Smaller height compared to the header */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content */
+    padding: 0 20px;
+    position: fixed; /* Fixed at the bottom of the page */
+    bottom: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4); /* Slight transparency similar to header */
+    color: #fff;
+    box-sizing: border-box;
+    pointer-events: none; /* Ensure the footer is not interfering with user interaction */
+}
+
+.footer-content {
+    font-size: 1rem; /* Smaller font size */
+    margin: 0;
+    pointer-events: auto; /* Keep the footer text interactive */
+}
+
