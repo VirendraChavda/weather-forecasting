@@ -103,23 +103,24 @@ These results demonstrate the robustness of the models in predicting weather par
    export BACKEND_URL="http://localhost:8080"
    ```
 4. <strong>Run Services</strong>
-  - Backend:
+- Backend:
    ```bash
    uvicorn backend:app --host 0.0.0.0 --port 8080
    ```
-  - Frontend:
+- Frontend:
    ```bash
    python app.py
    ```
 ## Usage
 <p align="justify">
 The application provides real-time weather predictions for selected cities. Users can:
+</p>
+
 1. Choose a city from the dropdown menu.
 2. View current weather details, including temperature, wind speed, and cloud cover.
 3. Access a detailed 5-hour forecast.
 
 The backend dynamically updates predictions using trained models and newly ingested data.
-</p>
 
 ---
 
