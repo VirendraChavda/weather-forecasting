@@ -2,7 +2,7 @@
 ### Author: Virendrasinh Chavda
 
 <p align="justify">
-This repository contains the code for a weather forecasting application that predicts various meteorological parameters using advanced machine learning models. Built on a robust tech stack involving **Dash**, **FastAPI**, **Google Cloud BigQuery**, and **Open-Meteo APIs**, the application provides precise and real-time weather forecasts for different cities. This repository includes all necessary backend logic, data ingestion pipelines, and trained models for seamless operation.
+This repository contains the code for a weather forecasting application that predicts various meteorological parameters using advanced machine learning models. Built on a robust tech stack involving <strong>Dash</strong>, <strong>FastAPI</strong>, <strong>Google Cloud BigQuery</strong>, and <strong>Open-Meteo APIs</strong>, the application provides precise and real-time weather forecasts for different cities. This repository includes all necessary backend logic, data ingestion pipelines, and trained models for seamless operation.
 </p>
 
 ![HomePage](weather.png)
@@ -23,31 +23,31 @@ This repository contains the code for a weather forecasting application that pre
 
 ## Overview
 <p align="justify">
-The Weather Forecasting Application leverages a combination of historical and real-time weather data to predict conditions like temperature, precipitation, cloud cover, wind speed, and snowfall. The system supports multiple cities and integrates **BigQuery** for efficient data storage and query processing. Predictions are made for the next 5 hours, providing users with actionable weather insights. The app uses machine learning models trained on weather patterns, employing scaling techniques to enhance prediction accuracy.
+The Weather Forecasting Application leverages a combination of historical and real-time weather data to predict conditions like temperature, precipitation, cloud cover, wind speed, and snowfall. The system supports multiple cities and integrates <strong>BigQuery</strong> for efficient data storage and query processing. Predictions are made for the next 5 hours, providing users with actionable weather insights. The app uses machine learning models trained on weather patterns, employing scaling techniques to enhance prediction accuracy.
 </p>
 
 ---
 
 ## Features
-- **Real-Time Data Fetching**: Retrieves live weather data using Open-Meteo APIs.
-- **Multi-Parameter Forecasting**: Predicts temperature, precipitation, cloud cover, wind speed, and snowfall.
-- **City-Specific Support**: Covers cities like London, Colchester, and Bristol, with an extensible architecture to include more locations.
-- **Automated Data Integration**: Ingests data into Google BigQuery, ensuring efficient data management and processing.
-- **Scalable Architecture**: Combines FastAPI for the backend and Dash for a dynamic user interface.
-- **Customizable Forecasting Models**: Uses pre-trained models and scaling techniques for reliable predictions.
+- <strong>Real-Time Data Fetching</strong>: Retrieves live weather data using Open-Meteo APIs.
+- <strong>Multi-Parameter Forecasting</strong>: Predicts temperature, precipitation, cloud cover, wind speed, and snowfall.
+- <strong>City-Specific Support</strong>: Covers cities like London, Colchester, and Bristol, with an extensible architecture to include more locations.
+- <strong>Automated Data Integration</strong>: Ingests data into Google BigQuery, ensuring efficient data management and processing.
+- <strong>Scalable Architecture</strong>: Combines FastAPI for the backend and Dash for a dynamic user interface.
+- <strong>Customizable Forecasting Models</strong>: Uses pre-trained models and scaling techniques for reliable predictions.
 
 ---
 
 ## Technologies Used
-- **Dash**: For building the interactive frontend and real-time visualization.
-- **FastAPI**: Backend framework to handle API endpoints and machine learning model inference.
-- **Google BigQuery**: Primary storage for processed weather data.
-- **Open-Meteo API**: To fetch real-time weather data.
-- **Python Libraries**:
+- <strong>Dash</strong>: For building the interactive frontend and real-time visualization.
+- <strong>FastAPI</strong>: Backend framework to handle API endpoints and machine learning model inference.
+- <strong>Google BigQuery</strong>: Primary storage for processed weather data.
+- <strong>Open-Meteo API</strong>: To fetch real-time weather data.
+- <strong>Python Libraries</strong>:
   - `joblib` for model serialization
   - `pandas` and `numpy` for data processing
   - `scikit-learn` for machine learning and scaling
-- **Google Cloud Platform**: For scalable and secure cloud infrastructure.
+- <strong>Google Cloud Platform</strong>: For scalable and secure cloud infrastructure.
 
 ---
 
@@ -71,16 +71,16 @@ Separate models for each parameter: temperature, precipitation, snowfall, wind s
 
 The models were evaluated on historical weather datasets with various performance metrics. Below are the summarized results for each parameter prediction:
 
-| **Parameter**     | **Model Used**      | **MAD Error** |
+| <strong>Parameter<strong>     | <strong>Model Used<strong>      | <strong>MAD Error<strong> |
 |--------------------|---------------------|------------|
-| **Temperature**   | Gradient Boosting   | 0.08        |
-| **Precipitation** | Random Forest       | 0.2       |
-| **Cloud Cover**   | CATBOOST     | 1.1       |
-| **Wind Speed**    | LGBM         | 0.012  |
-| **Snowfall**      | LGBM           | 0.001    |
+| <strong>Temperature<strong>   | Gradient Boosting   | 0.08        |
+| <strong>Precipitation<strong> | Random Forest       | 0.2       |
+| <strong>Cloud Cover<strong>   | CATBOOST     | 1.1       |
+| <strong>Wind Speed<strong>    | LGBM         | 0.012  |
+| <strong>Snowfall<strong>      | LGBM           | 0.001    |
 
-- **MAE (Mean Absolute Error)**: Lower values indicate higher accuracy.
-- **Accuracy**: Represents classification performance for cloud cover conditions.
+- <strong>MAE (Mean Absolute Error)</strong>: Lower values indicate higher accuracy.
+- <strong>Accuracy</strong>: Represents classification performance for cloud cover conditions.
 
 These results demonstrate the robustness of the models in predicting weather parameters accurately.
 
@@ -88,21 +88,21 @@ These results demonstrate the robustness of the models in predicting weather par
 
 ## Setup and Installation
 
-1. **Clone the Repository**
+1. <strong>Clone the Repository</strong>
    ```bash
    git clone https://github.com/VirendraChavda/weather-forecast.git
    cd weather-forecast
    ```
-2. **Install Dependencies**
+2. <strong>Install Dependencies</strong>
    ```bash
    pip install -r requirements.txt
    ```
-3. **Set Environment Variables Configure Google Cloud credentials and API settings**
+3. <strong>Set Environment Variables Configure Google Cloud credentials and API settings</strong>
    ```bash
    export GOOGLE_APPLICATION_CREDENTIALS="path_to_your_credentials.json"
    export BACKEND_URL="http://localhost:8080"
    ```
-4. **Run Services**
+4. <strong>Run Services</strong>
   - Backend:
    ```bash
    uvicorn backend:app --host 0.0.0.0 --port 8080
@@ -124,10 +124,10 @@ The backend dynamically updates predictions using trained models and newly inges
 ---
 
 ## Future Enhancements
-- **Extended Forecasts**: Add daily and weekly forecasts.
-- **Global Coverage**: Expand support to more cities and regions.
-- **Advanced Visualizations**: Incorporate graphs and charts for trend analysis.
-- **Ensemble Models**: Combine multiple algorithms for enhanced prediction accuracy.
+- <strong>Extended Forecasts</strong>: Add daily and weekly forecasts.
+- <strong>Global Coverage</strong>: Expand support to more cities and regions.
+- <strong>Advanced Visualizations</strong>: Incorporate graphs and charts for trend analysis.
+- <strong>Ensemble Models</strong>: Combine multiple algorithms for enhanced prediction accuracy.
 
 ---
 
