@@ -90,7 +90,7 @@ These results demonstrate the robustness of the models in predicting weather par
 
 1. <strong>Clone the Repository</strong>
    ```bash
-   git clone https://github.com/VirendraChavda/weather-forecast.git
+   git clone https://github.com/VirendraChavda/weather-forecasting.git
    cd weather-forecast
    ```
 2. <strong>Install Dependencies</strong>
